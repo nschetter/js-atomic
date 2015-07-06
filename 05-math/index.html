@@ -1,0 +1,28 @@
+<!doctype HTML>
+<html>
+<head>
+  <title>JS Atomic 05</title>
+  <script type="text/javascript" src="global.js"></script>
+</head>
+<body>
+  <h1>JS Atomic 05</h1>
+  <h2>All data is stored in the console. Please refer to the JS console.</h2>
+  
+  
+  <h2>What happens when you try to parse the integer out of a string like "Error 404"? How about "404 Error"? Other combinations of numbers and letters? What needs to be true about the incoming string for it to be parsed correctly?</h2>
+  <p>'Error 404' parsed as an integer returns as "NaN", which is not a number. '404 Error' parsed as an integer returns as "404". In order to be parsed correctly, it must begin with a number and not have anything BUT a number inbetween any other numbers to get the entirety of the numbers in a given variable. For example: "4error4" parsed as an integer will only return 4 because there are letters between both 4's.</p>
+  
+  <h2>What happens if one (or more) of the inputs are non-numeric text (like a comma or a dollar-sign)? What errors occur, if any? What does the console output tell you?</h2>
+  <p>The same concept applies here as in the previous question. These commas and dollars are treated as non-integers and follow the rules stated in the previous answer. No errors occur, but all of the numbers following non-integers are eliminated.</p>
+  
+  <h2>Why might you use the increment (++) or decrement (--) operators? What are some applications that you predict might come into play?</h2>
+  <p>These operators could be used to keep score in a simple game. If someone scores a point, they could have the variable 'score' increment by one. If someone is penalized, score would decrement by one.</p>
+  
+  <h2>Learn about the compound assignment operators (like += and -=) -- what problem do these solve and how are they used? What are situations where you might use a compound assignment operator instead of simple assignment (with =)? Which is easier to read: x += 2; or x = x + 2;?</h2>
+  <p>These are like the decrement/increment operators in a way, but they solve the problem of being able to decrement/increment by more than just one. Let's use the previous example and say there's an instance where more points may be rewarded -- we would use score += 3.</p>
+  
+  <h2>Research the Javascript Math Object -- can you get some of these methods to work? I'll recommend Math.pow(), Math.max(), and Math.abs() as starting points.</h2>
+  <p>Check the end of the console log for some Math Object tricks :)</p>
+  
+</body>
+</html>

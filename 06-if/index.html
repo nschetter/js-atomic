@@ -1,0 +1,121 @@
+<!doctype HTML>
+<html>
+<head>
+  <title>JS Atomic 06</title>
+  <script type="text/javascript" src="global.js"></script>
+</head>
+<body>
+  <h1>JS Atomic 06</h1>
+  
+  <p> I guessed all of them correctly! <strong>Yay!</strong>
+  
+  <h2>console.log( "5 == '5' is " + (5 == '5') );</h2>
+  <p>returns true -- The operator says that these 5's are equal despite their "typeof"</p>
+  
+  <h2>console.log( "5 == 'five' is " + (5 == 'five') );</h2>
+  <p>returns false -- The operator says these are equal, but they aren't because 5 is not the same as five. One is numeric/an integer, the other is a string.</p>
+  
+  <h2>console.log( "5 == '6' is " + (5 == '6') );</h2>
+  <p>returns false -- The operator says these are equal, but 5 is not equal to 6, so it's false.</p>
+  
+  <h2>console.log( "5 === '5' is " + (5 === '5') );</h2>
+  <p>returns false -- The operator says these are equal EVEN their data type, but 5 is an integer and '5' is a string.</p>
+  
+  <h2>console.log( "5 == 2 + 3 is " + (5 == 2 + 3) );</h2>
+  <p>returns true -- The operator says these are equal, and they are because it's essentially saying 5 is equal to 5.</p>
+  
+  <h2>console.log( "5 == 5 is " + (5 == 5) );</h2>
+  <p>returns true -- The operator says these are equal, and they are because they are both 5.</p>
+  
+  <h2>console.log( "5 === 5 is " + (5 === 5) );</h2>
+  <p>returns true -- The operator says these are equal EVEN their data type. They are both 5, and both integers, so this is true.</p>
+  
+  <h2>console.log( "true == 'true' is " + (true == 'true') );</h2>
+  <p>returns false -- The operator says these are equal, but a string is not equal to a boolean.</p>
+  
+  <h2>console.log( "true === 'true' is " + (true === 'true') );</h2>
+  <p>returns false -- The operator says these are equal EVEN their data type. They aren't equal because a string isn't equal to a boolean</p>
+  
+  <h2>console.log( "true == false is " + (true == false) );</h2>
+  <p>returns false -- The operator says these are equal, but they aren't because these are opposite booleans</p>
+  
+  <h2>console.log( "5 == 12 is " + (5 == 12) );</h2>
+  <p>returns false -- The operator says these are equal, but 5 is not equal to 12.</p>
+  
+  <h2>console.log( "5 !== 12 is " + (5 != 12) );</h2>
+  <p>returns true -- The operator says these are not equal, which is true since 5 is not the same as 12</p>
+  
+  <h2>console.log( "5 < 12 is " + (5 < 12) );</h2>
+  <p>returns true -- The operator says 5 is less than 12, which is true.</p>
+  
+  <h2>console.log( "5 <= 12 is " + (5 <= 12) );</h2>
+  <p>returns true -- The operator says is is less than OR equal to 12, which is true.</p>
+  
+  <h2>console.log( "5 > 12 is " + (5 > 12));</h2>
+  <p>returns false -- The operator says 5 is greater than 12, which is not true.</p>
+  
+  <h2>console.log( "5 >= 12 is " + (5 >= 12));</h2>
+  <p>returns false -- The operator says 5 is greater than OR equal to 12, which is not true.</p>
+  
+  <h2>What do you call true and false values?</h2>
+  <p>True/false values are booleans.</p>
+  
+  <h2>How is true similar or dissimilar from "true"? Can they be used in the same way?</h2>
+  <p>true is a boolean and "true" is a string. They can't be used interchangably.</p>
+  
+  <hr>
+  
+  <h1>Password</h1>
+  
+  <h2>Does it matter if the user-provided password matches your password exactly, or is there some flexibility allowed in capitalization?</h2>
+  <p>Unfortunately, the user must exactly type a case-sensitive response. We would need to create a function to assign to the user's response to modify whether or not it is capitalized.</p>
+  
+  <h2>Did you use = or == or === to compare passwords (or something else)? Why? Would any of the others work?</h2>
+  <p>= would not work since that assigns a value to a variable, and does not compare. I used ==, but === would also work in this case. I think ideally we would use == just so there aren't any issues that may come up from the === operator. The issue that may come up is if the password was a number and the user entered 5, which will be a string, when the password is actually 5 as an integer. '5' === 5 returns false.</p>
+  
+  <h2>What is the difference between == and ===?</h2>
+  <p>They are both comparison operators, but === requires the two items being compared to be the same data type.</p>
+  
+  <h2>In this case, does it make more sense to leave the user's guess as a string, or to convert it to an integer? Why? What are the relative advantages / disadvantages of each approach (particularly in terms of the types of new features that might be able to be added)?</h2>
+  <p>Since I used the == operator, I would leave it as a string, but I would need to parse it differently if it was the === operator.</p>
+  
+  <hr>
+  
+  <h1>Part One Drivers Ed</h1>
+  
+  <h2>Does it matter what order your if-statements are in?</h2>
+  <p>The order of my if statements did not matter.</p>
+  
+  <h2>When testing ranges, did you use &&, ||, or something else entirely (e.g. nested if-statements)? If you used &&, why is that a better choice than || (and vice-versa)?</h2>
+  <p>I used &&, because it says if age is less than/equal to the highest number in the range <em>AND</em> greater than/equal to the lowest number, then it fulfills that statement. The || (or) statement wouldn't work here, because only one of those conditions would need to be met, which could also be met in other conditions.</p>
+  
+  <h2>What types of input produce a value of NaN after parsing? Is it important to check for NaN values? Is it possible for a NaN value to trigger any of the other if-statements? If so, how and why?</h2>
+  <p>NaN encompasses any data type except floats and integers. A NaN value wouldn't trigger any of my other statements provided I used == and not ===.</p>
+  
+  <hr>
+  
+  <h1>Part 2 Drivers Ed</h1>
+  
+  <h2>Does it matter what order your if / else if statements happen? If you reorder them, does your program still produce correct output?</h2>
+  <p>Order doesn't matter, but makes the code much easier to read.</p>
+  
+  <h2>What's wrong with this conditional: if (age < 16 && age > 21)?</h2>
+  <p>There is no condition where this could be met. You can't be younger than 16 AND older than 21.</p>
+  
+  <h2>Let's say that your program needs to be easy to modify so that it works in parts of the country/world where the age ranges are different. How would you replace the numbers in your if statements with variables to make the program make sense? Or is it easier to just have the numbers be there? Does it matter?</h2>
+  <p>It may be easier to just replace the numbers, because in the program you'd still be picking where to replace things, unless you had a certain function that would insert the respective ages in for you when prompted what country you're from.</p>
+  
+  <hr>
+  
+  <h1>Triangles</h1>
+  
+  <h2>What happens if one (or more) of the lengths aren't input correctly and thus end up as NaN?</h2>
+  <p>No worries. Before the program runs, I have an automatic check to see if any of the sides returns NaN.</p>
+  
+  <h2>What happens if one of the lengths of the triangle is 0? Two of the lengths? All three lengths?</h2>
+  <p>It will return invalid for all three of those conditions</p>
+  
+  <h2>What happens if the user inputs one or more negative integers for the lengths of the triangle's legs?</h2>
+  <p>This causes an issue in my program, because it may return valid if one of the values is negative. I could put in a simple positive value checker with the NaN if statement.</p>
+</body>
+</html>
