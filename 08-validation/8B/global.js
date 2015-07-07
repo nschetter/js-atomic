@@ -1,32 +1,10 @@
-// 7H
-// 7D WITH for loop
-// FizzBuzz
+// 8B
 
-var startNum = parseInt(prompt("What number should we start with?"));
-var endNum = parseInt(prompt("Where should we end?"));
+var myNum = 87;
+var userNum = parseInt(prompt("I'm thinking of a number between 1 and 100. Guess what it is: "));
 
-if (startNum < endNum) {
-  for (startNum; startNum <= endNum; startNum += 1) {
-    if (startNum % 3 == 0 && startNum % 5 == 0) {
-      console.log("FizzBuzz");
-    } else if (startNum % 5 == 0) {
-      console.log("Buzz");
-    } else if (startNum % 3 == 0) {
-      console.log("Fizz");
-    } else {
-      console.log(startNum);
-    }
-  }
-} else {
-  for (startNum; startNum >= endNum; startNum -= 1) {
-    if (startNum % 3 == 0 && startNum % 5 == 0) {
-      console.log("FizzBuzz");
-    } else if (startNum % 5 == 0) {
-      console.log("Buzz");
-    } else if (startNum % 3 == 0) {
-      console.log("Fizz");
-    } else {
-      console.log(startNum);
-    }
-  }
+while (userNum != myNum) {
+  userNum = prompt("That's not the number. Guess again: ")
 }
+
+alert("You guessed it. It was " + myNum)
