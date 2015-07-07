@@ -1,32 +1,20 @@
-// 7H
-// 7D WITH for loop
-// FizzBuzz
+// 8D
 
-var startNum = parseInt(prompt("What number should we start with?"));
-var endNum = parseInt(prompt("Where should we end?"));
+// Triangles
+var validity = false
 
-if (startNum < endNum) {
-  for (startNum; startNum <= endNum; startNum += 1) {
-    if (startNum % 3 == 0 && startNum % 5 == 0) {
-      console.log("FizzBuzz");
-    } else if (startNum % 5 == 0) {
-      console.log("Buzz");
-    } else if (startNum % 3 == 0) {
-      console.log("Fizz");
-    } else {
-      console.log(startNum);
-    }
-  }
-} else {
-  for (startNum; startNum >= endNum; startNum -= 1) {
-    if (startNum % 3 == 0 && startNum % 5 == 0) {
-      console.log("FizzBuzz");
-    } else if (startNum % 5 == 0) {
-      console.log("Buzz");
-    } else if (startNum % 3 == 0) {
-      console.log("Fizz");
-    } else {
-      console.log(startNum);
-    }
+while (validity == false) {
+  var a = parseInt(prompt("Give me the first side of the triangle"));
+  var b = parseInt(prompt("Give me the second side of the triangle"));
+  var c = parseInt(prompt("Give me the third side of the triangle"));
+  if (isNaN(a) == true || isNaN(b) == true || isNaN(c) == true) {
+    alert("One or more of the sides you gave me were not numbers. Let's try again.")
+    validity = false
+  } else if ( (a + b > c) && (b + c > a) && (a + c > b) ) {
+    alert("This is a valid triangle")
+    validity = true
+  } else {
+    alert("Invalid triangle. Let's try again.")
+    validity = false
   }
 }
